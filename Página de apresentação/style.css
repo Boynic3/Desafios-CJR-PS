@@ -7,17 +7,15 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 10px; /* Espaço entre o texto e o contador */
+            gap: 10px; 
             transition: all 0.3s ease;
             font-family: Arial, sans-serif;
         }
 
-        /* Efeito ao passar o mouse */
         .botao-gostei:hover {
             background-color: #e4e4e4;
         }
 
-        /* Estilo quando o botão já foi clicado (ativo) */
         .botao-gostei.curtido {
             background-color: #007bff;
             color: white;

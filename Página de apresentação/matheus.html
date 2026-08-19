@@ -21,6 +21,29 @@
      <!-- colocar botão e contador de gostei e acrescentar css -->
       <button id="meuBotaoGostei" class="botao-gostei">
         👍 Gostei 
+      <span id="numeroContador" class="contador">0</span>
     </button>
+    <script>
+        const botao = document.getElementById('meuBotaoGostei');
+        const contadorTexto = document.getElementById('numeroContador');
+        
+        let curtidas = 0;
+        let jaCurtiu = false;
+
+        botao.addEventListener('click', function() {
+            if (!jaCurtiu) {
+                curtidas++;
+                botao.classList.add('curtido');
+            } else {
+                curtidas--;
+                botao.classList.remove('curtido');
+            }
+            
+            jaCurtiu = !jaCurtiu;
+            
+            contadorTexto.textContent = curtidas;
+        });
+    </script>
+    
 </body>
 </html>
