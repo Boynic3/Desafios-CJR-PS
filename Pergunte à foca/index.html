@@ -1,38 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pergunte à foca</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
     <div class="caixa-no-meio">
-        <h1>🦭Pergunte à foca🦭</h1>
-        
-        <img class="imagem-foca" src="https://thumbs.dreamstime.com/b/foca-divertida-balan%C3%A7ando-uma-bola-no-nariz-na-praia-brincalh%C3%A3o-colorida-da-com-ondas-caindo-fundo-sob-um-c%C3%A9u-brilhante-341480147.jpg" alt="Foca">
-        
-        <div class="pergunta">
-            <div class="opcoes">
-                <input type="text" class="input1" placeholder="Opção 1..."> 
-                <span class="ou">ou</span> 
-                <input type="text" class="input2" placeholder="Opção 2...">
-            </div>
-            
-            <button class="botao" type="button" onclick="respostaRandom()">Perguntar</button>
+      <h1>🦭Pergunte à foca🦭</h1>
+
+      <img
+        class="imagem-foca"
+        src=""
+        alt="Foca"
+      />
+
+      <div class="pergunta">
+        <div class="opcoes">
+          <input type="text" class="input1" placeholder="Opção 1..." />
+          <span class="ou">ou</span>
+          <input type="text" class="input2" placeholder="Opção 2..." />
         </div>
+
+        <button class="botao" type="button" onclick="respostaRandom()">
+          Perguntar
+        </button>
+      </div>
     </div>
 
-
-
     <script>
-        function respostaRandom(){
-            var escolha = Math.floor(Math.random() * 2);
-            if (escolha%2)
-	            alert("A foca escolheu "+document.querySelector(".input1").value)
-            else
-	            alert("A foca escolheu "+document.querySelector(".input2").value)
-        }
+      function respostaRandom() {
+        const escolheOpcao = Math.floor(Math.random() * 2);
+        if (escolheOpcao % 2)
+          alert("A foca escolheu " + document.querySelector(".input1").value);
+        else
+          alert("A foca escolheu " + document.querySelector(".input2").value);
+      }
+
+      const bancoDeImagens = [
+        "https://i.pinimg.com/736x/1d/0f/f6/1d0ff6685e2a82c46b3a7b3d8dde3efe.jpg",
+        "https://thumbs.dreamstime.com/b/foca-divertida-balan%C3%A7ando-uma-bola-no-nariz-na-praia-brincalh%C3%A3o-colorida-da-com-ondas-caindo-fundo-sob-um-c%C3%A9u-brilhante-341480147.jpg",
+        "https://preview.redd.it/drew-this-banana-of-a-seal-v0-ht0h8z8vdxpg1.jpg?width=640&crop=smart&auto=webp&s=dccd79b113435c1ec82219886fa148351336fa64",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0dZtpQBF6tk445jf_JQ9KG6CaPZ9dEloWH27y4xp0nnvBN43E1U0Uxw&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEULsQiGEa-Nb1YhDWpeJV4QX2wWO5q0yupT7Bcab_50FLAEayRffaxXId&s=10",
+      ];
+
+      const imagemFoca = Math.floor(Math.random() * bancoDeImagens.length);
+      document.querySelector(".imagem-foca").src = bancoDeImagens[imagemFoca];
     </script>
-</body>
+  </body>
 </html>
