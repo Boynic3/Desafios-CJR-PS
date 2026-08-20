@@ -19,8 +19,20 @@
                 <input type="text" class="input2" placeholder="Opção 2...">
             </div>
             
-            <button class="botao">Perguntar</button>
+            <button class="botao" type="button" onclick="respostaRandom()">Perguntar</button>
         </div>
     </div>
+
+
+
+    <script>
+        function respostaRandom(){
+            var escolha = Math.floor(Math.random() * 2);
+            if (escolha%2)
+	            alert("A foca escolheu "+document.querySelector(".input1").value)
+            else
+	            alert("A foca escolheu "+document.querySelector(".input2").value)
+        }
+    </script>
 </body>
 </html>
