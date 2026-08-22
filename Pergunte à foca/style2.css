@@ -16,19 +16,17 @@ body {
   background-image:
     radial-gradient(
       circle at 50% 100%,
-      transparent 20%,
-      rgba(255, 255, 255, 0.15) 21%,
-      rgba(255, 255, 255, 0.15) 34%,
-      transparent 35%,
-      transparent
+      transparent 15px,
+      rgba(255, 255, 255, 0.15) 16px, 
+      rgba(255, 255, 255, 0.15) 24px,
+      transparent 25px
     ),
     radial-gradient(
       circle at 50% 0%,
-      transparent 20%,
-      rgba(255, 255, 255, 0.15) 21%,
-      rgba(255, 255, 255, 0.15) 34%,
-      transparent 35%,
-      transparent
+      transparent 15px,
+      rgba(255, 255, 255, 0.15) 16px, 
+      rgba(255, 255, 255, 0.15) 24px,
+      transparent 25px
     ),
     linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
 
@@ -39,7 +37,7 @@ body {
 
   background-position:
     0 0,
-    -40px 0,
+    40px 0,
     0 0;
 }
 
